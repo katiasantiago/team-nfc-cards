@@ -2,91 +2,366 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katia Santiago</title>
 
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body{
-            font-family: Arial, sans-serif;
-            background:#f5f5f5;
-            display:flex;
-            justify-content:center;
-            padding:30px;
-        }
+<title>Katia Santiago Del Rio</title>
 
-        .card{
-            background:white;
-            max-width:500px;
-            width:100%;
-            border-radius:20px;
-            padding:30px;
-            box-shadow:0 5px 15px rgba(0,0,0,.1);
-            text-align:center;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        img{
-            width:150px;
-            height:150px;
-            border-radius:50%;
-            object-fit:cover;
-        }
+<style>
 
-        h1{
-            margin-top:15px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .btn{
-            display:block;
-            margin:10px 0;
-            padding:12px;
-            border-radius:10px;
-            text-decoration:none;
-            color:white;
-            font-weight:bold;
-        }
+body{
 
-        .linkedin{
-            background:#0A66C2;
-        }
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 
-        .whatsapp{
-            background:#25D366;
-        }
+    background:linear-gradient(
+        180deg,
+        #FFF7CC 0%,
+        #FFFDF4 40%,
+        #FFFFFF 100%
+    );
 
-        .contacto{
-            background:#444;
-        }
+    color:#4F3B1F;
 
-    </style>
+    min-height:100vh;
+
+}
+
+.hero{
+
+    text-align:center;
+    padding:40px 25px;
+
+}
+
+.foto{
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+.nombre{
+
+    margin-top:20px;
+
+    font-size:2rem;
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+.ubicacion{
+
+    margin-top:10px;
+
+    color:#866A3A;
+
+    font-size:.95rem;
+
+}
+
+.puesto{
+
+    margin-top:12px;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+}
+
+.tagline{
+
+    margin-top:18px;
+
+    line-height:1.7;
+
+    color:#6B5330;
+
+}
+
+.botones{
+
+    margin-top:25px;
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+.btn{
+
+    text-decoration:none;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    transition:.2s;
+
+}
+
+.btn:active{
+
+    transform:scale(.98);
+
+}
+
+.contacto{
+
+    background:#F8E36E;
+    color:#4F3B1F;
+
+}
+
+.linkedin{
+
+    background:#0A66C2;
+    color:white;
+
+}
+
+.whatsapp{
+
+    background:#25D366;
+    color:white;
+
+}
+
+.correo{
+
+    background:#55402D;
+    color:white;
+
+}
+
+.container{
+
+    padding:0 22px 40px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:22px;
+
+    border-radius:24px;
+
+    margin-top:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.card h2{
+
+    margin-bottom:12px;
+
+    font-size:1.1rem;
+
+}
+
+.card p{
+
+    line-height:1.7;
+
+}
+
+.habilidades{
+
+    display:grid;
+
+    gap:14px;
+
+}
+
+.habilidad{
+
+    background:#FFF7D9;
+
+    border-radius:16px;
+
+    padding:14px;
+
+}
+
+.habilidad strong{
+
+    display:block;
+
+    margin-bottom:4px;
+
+}
+
+.quote{
+
+    background:#F8E36E;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    font-style:italic;
+
+    line-height:1.7;
+
+    color:#4F3B1F;
+
+}
+
+.footer{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#886E42;
+
+    font-size:.85rem;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="card">
+<section class="hero">
 
-    <img src="https://via.placeholder.com/300">
+    <img src="katia.jpg" class="foto">
 
-    <h1>Katia Santiago</h1>
+    <h1 class="nombre">
+        Katia Santiago Del Rio
+    </h1>
 
-    <h3>Analista Gestión & Análisis Comercial</h3>
-
-    <p>
-        Ayudo a convertir información comercial en estrategias y oportunidades de crecimiento.
+    <p class="ubicacion">
+        📍 Puebla, México
     </p>
 
-    <a class="btn linkedin" href="#">
-        LinkedIn
-    </a>
+    <p class="puesto">
+        Analista Gestión & Análisis Comercial
+    </p>
 
-    <a class="btn whatsapp" href="#">
-        WhatsApp
-    </a>
+    <p class="tagline">
+        Transformo datos e información comercial en oportunidades, procesos más eficientes y mejores experiencias.
+    </p>
 
-    <a class="btn contacto" href="#">
-        Guardar contacto
-    </a>
+    <div class="botones">
+
+        <a
+        class="btn contacto"
+        href="contacto.vcf"
+        download>
+        📇 Guardar contacto
+        </a>
+
+        <a
+        class="btn whatsapp"
+        href="https://wa.me/qr/TQZ2Q4BZPRHHJ1">
+        💬 WhatsApp
+        </a>
+
+        <a
+        class="btn linkedin"
+        href="https://www.linkedin.com/in/katia-santiago-del-rio">
+        💼 LinkedIn
+        </a>
+
+        <a
+        class="btn correo"
+        href="mailto:katia.santiago@kof.com">
+        ✉️ Correo
+        </a>
+
+    </div>
+
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>🌼 Un poco sobre mí</h2>
+
+        <p>
+            Soy analista de gestión comercial y disfruto encontrar patrones, entender procesos y convertir información en acciones concretas. Me apasiona combinar análisis y creatividad para hacer las cosas más eficientes, claras y visualmente atractivas.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>⭐ Lo que me caracteriza</h2>
+
+        <div class="habilidades">
+
+            <div class="habilidad">
+                <strong>🔎 Detallista</strong>
+                Atención a los detalles sin perder de vista el objetivo general.
+            </div>
+
+            <div class="habilidad">
+                <strong>⚡ Aprendizaje y adaptación</strong>
+                Disfruto aprender herramientas, procesos y nuevas formas de trabajar.
+            </div>
+
+            <div class="habilidad">
+                <strong>📊 Analítica y creativa</strong>
+                Me gusta combinar datos y creatividad para resolver problemas.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🎮 Más allá del trabajo</h2>
+
+        <p>
+            Me gustan los videojuegos, la mejora continua, entender cómo funcionan las cosas y encontrar formas de hacerlas más simples, útiles y estéticas.
+        </p>
+
+    </div>
+
+    <div class="quote">
+
+        "Me gusta entender cómo funcionan las cosas, pero aún más encontrar la manera de hacerlas mejor y más bonitas."
+
+    </div>
+
+    <div class="footer">
+
+        Hecho con ☕ y mucha curiosidad.
+
+    </div>
 
 </div>
 
