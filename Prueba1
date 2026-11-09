@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi espacio | Marca Personal</title>
+<meta name="description" content="Conoce mi perfil profesional, experiencia, proyectos y nuevas oportunidades de colaboración.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #F8F5EF;
+  --white: #FFFFFF;
+  --dark: #242424;
+  --red: #E9424F;
+  --muted: #85817C;
+  --soft: #EEE9E0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* HEADER */
+
+header {
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248,245,239,.95);
+  backdrop-filter: blur(15px);
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--red);
+}
+
+.header-tag {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* HERO */
+
+.hero {
+  padding: 55px 7% 65px;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(46px, 13vw, 75px);
+  line-height: 1.03;
+  letter-spacing: -3px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.hero h1 span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.hero-description {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  max-width: 440px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--red);
+  color: white;
+  padding: 16px 25px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 48px;
+  transition: .3s;
+}
+
+.button:hover {
+  background: #C92F3D;
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  position: relative;
+  width: 85%;
+  max-width: 330px;
+  height: 390px;
+  margin: 45px auto 0;
+  border-radius: 180px 180px 25px 25px;
+  background: #E7D9CB;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-tag {
+  position: absolute;
+  bottom: 18px;
+  right: 12px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  background: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* SECCIONES GENERALES */
+
+section {
+  padding: 75px 7%;
+}
+
+.section-title {
+  font-size: 37px;
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+  margin-bottom: 22px;
+}
+
+.section-title span {
+  color: var(--red);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+/* ABOUT */
+
+.about {
+  background: white;
+}
+
+.about-text {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-note {
+  margin-top: 25px;
+  padding: 22px;
+  background: var(--cream);
+  border-left: 4px solid var(--red);
+  border-radius: 0 15px 15px 0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+/* ESPECIALIDADES */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  background: white;
+  padding: 27px;
+  border-radius: 20px;
+  transition: .3s;
+  border: 1px solid #eee9e0;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #FCE7E8;
+  color: var(--red);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.skill-card h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* PROYECTOS */
+
+.projects {
+  background: var(--soft);
+}
+
+.project-card {
+  margin-top: 18px;
+  background: white;
+  padding: 27px;
+  border-radius: 20px;
+}
+
+.project-number {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.project-card h3 {
+  font-size: 21px;
+  margin: 14px 0 10px;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* FRASE */
+
+.quote {
+  text-align: center;
+  background: var(--red);
+  color: white;
+  padding: 65px 9%;
+}
+
+.quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 29px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.quote small {
+  display: block;
+  margin-top: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* CONTACTO */
+
+.contact {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 80px 7%;
+}
+
+.contact .eyebrow {
+  color: #FF8990;
+}
+
+.contact h2 {
+  font-size: 43px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.contact h2 span {
+  color: #FF8990;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.contact p {
+  color: #BDBDBD;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  color: #FF8990;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 25px 10%;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+/* NAVEGACION INFERIOR MOVIL */
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 5% calc(12px + env(safe-area-inset-bottom));
+}
+
+.mobile-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.mobile-nav a span {
+  font-size: 19px;
+}
+
+.mobile-nav a:hover {
+  color: var(--red);
+}
+
+body {
+  padding-bottom: 75px;
+}
+
+/* TABLET Y ESCRITORIO */
+
+@media (min-width: 768px) {
+
+  header {
+    padding: 25px 9%;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 45px;
+    padding: 90px 9%;
+  }
+
+  .hero h1 {
+    font-size: clamp(60px, 7vw, 90px);
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+  }
+
+  section {
+    padding: 100px 9%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-card {
+    padding: 35px;
+  }
+
+  .contact h2 {
+    font-size: 65px;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+
+<header>
+  <div class="logo">MI<span>.</span> ESPACIO</div>
+  <div class="header-tag">Personal Brand · 2026</div>
+</header>
+
+<!-- INICIO -->
+
+<main>
+
+<section class="hero" id="inicio">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">Hola, qué gusto tenerte aquí ✨</div>
+
+    <h1>
+      Ideas que se convierten en
+      <span>resultados.</span>
+    </h1>
+
+    <p class="hero-description">
+      Soy [TU NOMBRE]. Me apasiona conectar personas,
+      desarrollar ideas y transformar oportunidades
+      en proyectos que generan valor.
+    </p>
+
+    <a href="#sobre-mi" class="button">
+      Conoce más sobre mí ↗
+    </a>
+
+  </div>
+
+  <div class="hero-image">
+    <!-- Reemplaza mi-foto.jpg por tu fotografía -->
+    <img src="mi-foto.jpg" alt="Mi fotografía personal">
+    <div class="image-tag">Mucho gusto ♡</div>
+  </div>
+
+</section>
+
+<!-- SOBRE MI -->
+
+<section class="about" id="sobre-mi">
+
+  <div class="eyebrow">Un poquito sobre mí</div>
+
+  <h2 class="section-title">
+    Más que un perfil,
+    <span>una historia.</span>
+  </h2>
+
+  <p class="about-text">
+    Creo que detrás de cada gran resultado existe una
+    combinación de estrategia, creatividad y compromiso.
+
+    Me gusta aprender, explorar nuevas ideas y encontrar
+    soluciones que generen un impacto positivo.
+
+    Disfruto construir relaciones profesionales basadas
+    en la confianza, la colaboración y los buenos resultados.
+  </p>
+
+  <div class="about-note">
+    "Siempre hay una nueva oportunidad para aprender,
+    crear y hacer las cosas diferente."
+  </div>
+
+</section>
+
+<!-- ESPECIALIDADES -->
+
+<section id="especialidades">
+
+  <div class="eyebrow">Mi mundo profesional</div>
+
+  <h2 class="section-title">
+    Lo que puedo
+    <span>aportar.</span>
+  </h2>
+
+  <div class="skills-grid">
+
+    <article class="skill-card">
+      <div class="skill-icon">✦</div>
+      <h3>Visión comercial</h3>
+      <p>
+        Identificación de oportunidades, estrategias
+        y desarrollo de iniciativas de negocio.
+      </p>
+    </article>
+
+    <article class="skill-card">
+      <div class="skill-icon">↗</div>
+      <h3>Análisis de información</h3>
+      <p>
+        Transformar datos en indicadores,
+        conocimiento y decisiones estratégicas.
+      </p>
+    </article>
+
+    <article class="skill-card">
+      <div class="skill-icon">✧</div>
+      <h3>Creatividad e innovación</h3>
+      <p>
+        Nuevas ideas, soluciones y proyectos
+        enfocados en generar valor.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<!-- PROYECTOS -->
+
+<section class="projects" id="proyectos">
+
+  <div class="eyebrow">Experiencia y proyectos</div>
+
+  <h2 class="section-title">
+    Ideas que se vuelven
+    <span>realidad.</span>
+  </h2>
+
+  <article class="project-card">
+    <div class="project-number">PROYECTO 01</div>
+    <h3>Estrategia comercial</h3>
+    <p>
+      Desarrollo de iniciativas y seguimiento
+      de oportunidades enfocadas en crecimiento.
+    </p>
+  </article>
+
+  <article class="project-card">
+    <div class="project-number">PROYECTO 02</div>
+    <h3>Inteligencia de negocio</h3>
+    <p>
+      Análisis de información, indicadores
+      y visualización de resultados.
+    </p>
+  </article>
+
+  <article class="project-card">
+    <div class="project-number">PROYECTO 03</div>
+    <h3>Desarrollo de proyectos</h3>
+    <p>
+      Planeación, creatividad y ejecución
+      de iniciativas para alcanzar objetivos.
+    </p>
+  </article>
+
+</section>
+
+<!-- FRASE -->
+
+<section class="quote">
+
+  <p>
+    "Las mejores conexiones comienzan
+    con una buena conversación."
+  </p>
+
+  <small>Conectemos ideas · Creemos oportunidades</small>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+
+  <div class="eyebrow">El siguiente paso comienza aquí</div>
+
+  <h2>
+    ¿Creamos algo
+    <span>increíble?</span>
+  </h2>
+
+  <p>
+    Siempre estoy abierta a nuevas ideas,
+    proyectos y oportunidades de colaboración.
+  </p>
+
+  <a href="mailto:TU-CORREO@ejemplo.com" class="button">
+    Escríbeme ↗
+  </a>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+    <a href="https://www.instagram.com/" target="_blank">Instagram ↗</a>
+  </div>
+
+</section>
+
+</main>
+
+<!-- PIE DE PAGINA -->
+
+<footer>
+  © 2026 · Mi espacio personal · Hecho con creatividad ♡
+</footer>
+
+<!-- MENU INFERIOR -->
+
+<nav class="mobile-nav">
+
+  <a href="#inicio">
+    <span>⌂</span>
+    Inicio
+  </a>
+
+  <a href="#sobre-mi">
+    <span>♡</span>
+    Sobre mí
+  </a>
+
+  <a href="#especialidades">
+    <span>✧</span>
+    Habilidades
+  </a>
+
+  <a href="#proyectos">
+    <span>▤</span>
+    Proyectos
+  </a>
+
+  <a href="#contacto">
+    <span>✉</span>
+    Contacto
+  </a>
+
+</nav>
+
+</body>
+</html>
