@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mi espacio | Marca Personal</title>
+<title>Yoranddi | Mi espacio personal</title>
 
-<meta name="description" content="Conoce mi perfil profesional, experiencia, proyectos y nuevas oportunidades de colaboración.">
+<meta name="description" content="Conoce quién soy, lo que hago, mis proyectos y conectemos.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,17 +21,17 @@
 ================================= */
 
 :root {
-  --cream: #FFF8E8;
-  --white: #FFFFFF;
-  --dark: #514536;
-  --yellow: #F9E7A8;
-  --yellow-dark: #E8C66B;
-  --caramel: #D9C29D;
+  --crema: #FFF8E8;
+  --blanco: #FFFFFF;
+  --cafe: #514536;
+  --amarillo: #F9E7A8;
+  --amarillo-oscuro: #E8C66B;
+  --caramelo: #D9C29D;
   --beige: #E8D8C8;
-  --pink: #F3D9D7;
-  --sage: #B9CDB9;
-  --muted: #887B69;
-  --soft: #F5EBD5;
+  --rosa: #F3D9D7;
+  --verde: #B9CDB9;
+  --texto-suave: #887B69;
+  --fondo-suave: #F5EBD5;
 }
 
 /* =================================
@@ -45,19 +46,19 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 75px;
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--dark);
+  background: var(--crema);
+  color: var(--cafe);
   overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -66,7 +67,29 @@ img {
 }
 
 section {
-  padding: 75px 7%;
+  padding: 70px 7%;
+}
+
+.eyebrow {
+  color: #A47D38;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.titulo {
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.titulo span {
+  color: #C49A42;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
 }
 
 /* =================================
@@ -81,7 +104,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255,248,232,.94);
+  background: rgba(255,248,232,.95);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid #EFE5D2;
 }
@@ -96,347 +119,427 @@ header {
   color: #C49A42;
 }
 
-.header-tag {
+.etiqueta-header {
   font-size: 9px;
   letter-spacing: 1.5px;
-  color: var(--muted);
+  color: var(--texto-suave);
   text-transform: uppercase;
-}
-
-/* =================================
-   TEXTOS GENERALES
-================================= */
-
-.eyebrow {
-  color: #A47D38;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
-.section-title {
-  font-size: 37px;
-  line-height: 1.15;
-  letter-spacing: -1.8px;
-  margin-bottom: 22px;
-}
-
-.section-title span {
-  color: #C49A42;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
 }
 
 /* =================================
    BOTONES
 ================================= */
 
-.button {
+.boton {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  background: var(--yellow-dark);
-  color: var(--dark);
-  padding: 16px 25px;
+  gap: 8px;
+  background: var(--amarillo-oscuro);
+  color: var(--cafe);
+  padding: 15px 23px;
   border-radius: 50px;
   font-size: 13px;
   font-weight: 800;
   min-height: 48px;
   transition: .3s;
-  box-shadow: 0 5px 15px #D9C29D35;
+  border: none;
+  cursor: pointer;
 }
 
-.button:hover {
+.boton:hover {
   background: #D9B45A;
   transform: translateY(-3px);
 }
 
+.boton-secundario {
+  background: white;
+  border: 1px solid #E8D8C8;
+}
+
 /* =================================
-   INICIO / HERO
+   01. CONTACTO / PORTADA
 ================================= */
 
-.hero {
-  padding: 55px 7% 65px;
-  position: relative;
+.contacto-inicial {
+  padding: 55px 7% 60px;
+  text-align: center;
+  background: var(--crema);
 }
 
-.hero h1 {
-  font-size: clamp(46px, 13vw, 75px);
-  line-height: 1.03;
-  letter-spacing: -3px;
-  font-weight: 800;
-  margin-bottom: 22px;
+.contacto-inicial h1 {
+  font-size: clamp(43px, 12vw, 65px);
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+  margin-bottom: 20px;
 }
 
-.hero h1 span {
+.contacto-inicial h1 span {
+  display: block;
+  color: #C49A42;
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  color: #C49A42;
-  font-weight: 600;
 }
 
-.hero-description {
-  color: var(--muted);
-  font-size: 15px;
+.texto-inicial {
+  font-size: 14px;
+  color: var(--texto-suave);
   line-height: 1.8;
-  margin-bottom: 28px;
-  max-width: 440px;
+  max-width: 420px;
+  margin: 0 auto 25px;
 }
 
-.hero-image {
-  position: relative;
-  width: 85%;
-  max-width: 330px;
-  height: 390px;
-  margin: 45px auto 0;
-  border-radius: 180px 180px 25px 25px;
-  background: var(--yellow);
-  overflow: hidden;
+.foto-portada {
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  background: var(--amarillo);
   border: 7px solid white;
-  box-shadow: 0 15px 35px #D9C29D40;
+  margin: 30px auto;
+  overflow: hidden;
+  box-shadow: 0 10px 30px #D9C29D50;
 }
 
-.hero-image img {
+.foto-portada img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.image-tag {
-  position: absolute;
-  bottom: 18px;
-  right: 12px;
-  padding: 12px 18px;
-  border-radius: 30px;
-  background: white;
+.botones-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.nota-contacto {
   font-size: 11px;
-  font-weight: 700;
+  color: var(--texto-suave);
+  margin-top: 22px;
 }
 
 /* =================================
-   SOBRE MÍ
+   02. PRESENTACIÓN
 ================================= */
 
-.about {
+.presentacion {
   background: white;
   border-radius: 30px 30px 0 0;
 }
 
-.about-text {
-  color: var(--muted);
+.texto-presentacion {
+  color: var(--texto-suave);
   font-size: 15px;
   line-height: 1.9;
 }
 
-.about-note {
+.frase-presentacion {
   margin-top: 25px;
-  padding: 23px;
-  background: var(--yellow);
-  border-left: 4px solid #D5AD50;
-  border-radius: 0 15px 15px 0;
+  padding: 22px;
+  background: var(--amarillo);
+  border-radius: 18px;
   font-family: 'Playfair Display', serif;
-  font-style: italic;
   font-size: 19px;
+  font-style: italic;
   line-height: 1.5;
 }
 
 /* =================================
-   ESPECIALIDADES
+   03. PROPUESTA DE VALOR
 ================================= */
 
-.skills-grid {
+.propuesta {
+  background: var(--crema);
+}
+
+.tarjetas-propuesta {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
   margin-top: 30px;
 }
 
-.skill-card {
+.tarjeta {
+  padding: 26px;
   background: white;
-  padding: 27px;
   border-radius: 20px;
-  transition: .3s;
   border: 1px solid #F0E6D3;
+  transition: .3s;
 }
 
-.skill-card:hover {
+.tarjeta:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px #D9C29D30;
 }
 
-.skill-icon {
-  width: 45px;
-  height: 45px;
-  border-radius: 15px;
+.icono {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
   display: grid;
   place-items: center;
   background: #FFF1C9;
-  color: #A47D38;
-  font-size: 21px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 17px;
 }
 
-.skill-card:nth-child(2) .skill-icon {
-  background: var(--pink);
-  color: #946E67;
+.tarjeta:nth-child(2) .icono {
+  background: var(--rosa);
 }
 
-.skill-card:nth-child(3) .skill-icon {
-  background: var(--sage);
-  color: #4E6B50;
+.tarjeta:nth-child(3) .icono {
+  background: var(--verde);
 }
 
-.skill-card h3 {
-  font-size: 19px;
+.tarjeta:nth-child(4) .icono {
+  background: var(--beige);
+}
+
+.tarjeta h3 {
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.skill-card p {
+.tarjeta p {
+  color: var(--texto-suave);
   font-size: 13px;
   line-height: 1.8;
-  color: var(--muted);
 }
 
 /* =================================
-   PROYECTOS
+   04. PROYECTOS
 ================================= */
 
-.projects {
+.proyectos {
   background: #F5EBD5;
 }
 
-.project-card {
-  margin-top: 18px;
+.intro-proyectos {
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.proyecto {
   background: white;
-  padding: 27px;
+  padding: 25px;
   border-radius: 20px;
-  border: 1px solid #EDE1CD;
+  margin-top: 16px;
   transition: .3s;
 }
 
-.project-card:hover {
+.proyecto:hover {
   transform: translateY(-4px);
 }
 
-.project-number {
+.numero-proyecto {
   color: #A47D38;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
-.project-card h3 {
-  font-size: 21px;
-  margin: 14px 0 10px;
+.proyecto h3 {
+  font-size: 20px;
+  margin: 13px 0 10px;
 }
 
-.project-card p {
-  color: var(--muted);
+.proyecto p {
+  color: var(--texto-suave);
   font-size: 13px;
   line-height: 1.8;
 }
 
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.etiquetas span {
+  padding: 7px 11px;
+  border-radius: 30px;
+  background: var(--crema);
+  font-size: 10px;
+  color: var(--cafe);
+}
+
 /* =================================
-   FRASE DESTACADA
+   05. FILOSOFÍA PERSONAL
 ================================= */
 
-.quote {
+.filosofia {
+  background: var(--amarillo);
   text-align: center;
-  background: var(--yellow);
-  color: var(--dark);
   padding: 65px 9%;
 }
 
-.quote p {
+.filosofia h2 {
   font-family: 'Playfair Display', serif;
   font-size: 29px;
-  line-height: 1.4;
+  line-height: 1.45;
   font-style: italic;
+  font-weight: 600;
 }
 
-.quote small {
-  display: block;
-  margin-top: 18px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.filosofia p {
+  margin-top: 20px;
+  font-size: 12px;
   color: #786644;
+  letter-spacing: 1.5px;
 }
 
 /* =================================
-   CONTACTO
+   06. LADO HUMANO
 ================================= */
 
-.contact {
-  background: #514536;
+.personal {
+  background: white;
+}
+
+.texto-personal {
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.intereses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.interes {
+  background: var(--crema);
+  padding: 20px 12px;
+  border-radius: 17px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.interes span {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+/* =================================
+   07. TARJETA DIGITAL
+================================= */
+
+.tarjeta-digital {
+  background: var(--fondo-suave);
+  padding: 35px 7%;
+  text-align: center;
+}
+
+.tarjeta-contacto {
+  max-width: 380px;
+  margin: 25px auto 0;
+  padding: 28px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px #51453610;
+}
+
+.tarjeta-contacto h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.tarjeta-contacto p {
+  color: var(--texto-suave);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.tarjeta-contacto a {
+  display: block;
+  font-size: 12px;
+  margin: 13px 0;
+  color: #8B6B34;
+  font-weight: 600;
+}
+
+.tarjeta-contacto button {
+  margin-top: 15px;
+}
+
+/* =================================
+   CIERRE / CONECTEMOS
+================================= */
+
+.cierre {
+  background: var(--cafe);
   color: white;
   text-align: center;
-  padding: 80px 7%;
+  padding: 75px 7%;
 }
 
-.contact .eyebrow {
-  color: var(--yellow);
+.cierre .eyebrow {
+  color: var(--amarillo);
 }
 
-.contact h2 {
-  font-size: 43px;
-  line-height: 1.1;
+.cierre h2 {
+  font-size: 42px;
+  line-height: 1.12;
   letter-spacing: -2px;
   margin-bottom: 20px;
 }
 
-.contact h2 span {
-  color: var(--yellow);
+.cierre h2 span {
+  display: block;
+  color: var(--amarillo);
   font-family: 'Playfair Display', serif;
   font-style: italic;
 }
 
-.contact p {
+.cierre p {
   color: #E1D8C9;
   font-size: 14px;
   line-height: 1.8;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
-.social-links {
-  margin-top: 30px;
+.redes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 22px;
+  margin-top: 30px;
 }
 
-.social-links a {
-  color: white;
+.redes a {
   font-size: 12px;
-  font-weight: 600;
+  color: white;
 }
 
-.social-links a:hover {
-  color: var(--yellow);
+.redes a:hover {
+  color: var(--amarillo);
 }
 
 /* =================================
-   FOOTER
+   PIE DE PÁGINA
 ================================= */
 
 footer {
-  text-align: center;
   padding: 25px 10%;
+  text-align: center;
   font-size: 10px;
-  color: var(--muted);
-  background: var(--cream);
+  color: var(--texto-suave);
 }
 
 /* =================================
-   NAVEGACIÓN INFERIOR MÓVIL
+   MENÚ INFERIOR
 ================================= */
 
-.mobile-nav {
+.menu-movil {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -447,27 +550,26 @@ footer {
   border-top: 1px solid #EEE4D2;
   display: flex;
   justify-content: space-around;
-  padding: 12px 4% calc(12px + env(safe-area-inset-bottom));
+  padding: 11px 2% calc(11px + env(safe-area-inset-bottom));
   box-shadow: 0 -5px 20px #5145360A;
 }
 
-.mobile-nav a {
+.menu-movil a {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  color: var(--muted);
+  color: var(--texto-suave);
   font-size: 9px;
   font-weight: 600;
-  min-width: 45px;
-  transition: .2s;
+  min-width: 48px;
 }
 
-.mobile-nav a span {
-  font-size: 19px;
+.menu-movil a span {
+  font-size: 18px;
 }
 
-.mobile-nav a:hover {
+.menu-movil a:hover {
   color: #B18A3F;
 }
 
@@ -476,78 +578,75 @@ body {
 }
 
 /* =================================
-   TABLETS Y ESCRITORIO
+   ADAPTACIÓN A TABLETS Y PC
 ================================= */
 
 @media (min-width: 768px) {
 
   header {
-    padding: 25px 9%;
+    padding: 22px 9%;
   }
 
-  .hero {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    align-items: center;
-    gap: 45px;
-    padding: 90px 9%;
+  .contacto-inicial {
+    padding: 85px 9%;
   }
 
-  .hero h1 {
-    font-size: clamp(60px, 7vw, 90px);
+  .contacto-inicial h1 {
+    font-size: 75px;
   }
 
-  .hero-image {
-    width: 100%;
-    height: 450px;
-    margin: 0;
+  .botones-contacto {
+    flex-direction: row;
+    max-width: none;
+    justify-content: center;
   }
 
   section {
-    padding: 100px 9%;
+    padding: 95px 9%;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .titulo {
+    font-size: 48px;
   }
 
-  .project-card {
-    padding: 35px;
+  .tarjetas-propuesta {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact h2 {
+  .proyecto {
+    padding: 32px;
+  }
+
+  .intereses {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cierre h2 {
     font-size: 65px;
   }
 
-  .mobile-nav {
+  .menu-movil {
     display: none;
   }
 
   body {
     padding-bottom: 0;
   }
-}
 
-/* =================================
-   CELULARES PEQUEÑOS
-================================= */
+}
 
 @media (max-width: 360px) {
 
-  .hero h1 {
-    font-size: 43px;
+  .contacto-inicial h1 {
+    font-size: 41px;
   }
 
-  .section-title {
-    font-size: 32px;
+  .titulo {
+    font-size: 31px;
   }
 
-  .contact h2 {
+  .cierre h2 {
     font-size: 36px;
-  }
-
-  .header-tag {
-    font-size: 8px;
   }
 
 }
@@ -563,10 +662,10 @@ body {
 
 <header>
 
-  <div class="logo">MI<span>.</span> ESPACIO</div>
+  <div class="logo">YORANDDI<span>.</span></div>
 
-  <div class="header-tag">
-    Personal Brand · 2026
+  <div class="etiqueta-header">
+    Mi espacio personal
   </div>
 
 </header>
@@ -574,137 +673,149 @@ body {
 <main>
 
 <!-- =================================
-     INICIO
+     01. CONTACTO INICIAL
 ================================= -->
 
-<section class="hero" id="inicio">
+<section class="contacto-inicial" id="inicio">
 
-  <div class="hero-content">
+  <div class="eyebrow">
+    ¡Hola! Qué gusto tenerte aquí
+  </div>
 
-    <div class="eyebrow">
-      Hola, qué gusto tenerte aquí ✨
-    </div>
+  <h1>
+    ¿Hablamos?
+    <span>Conectemos ideas.</span>
+  </h1>
 
-    <h1>
-      Ideas que se convierten en
-      <span>resultados.</span>
-    </h1>
+  <p class="texto-inicial">
+    Siempre hay espacio para nuevas conversaciones,
+    proyectos y oportunidades. Me encantará conocerte.
+  </p>
 
-    <p class="hero-description">
-      Soy [TU NOMBRE]. Me apasiona conectar personas,
-      desarrollar ideas y transformar oportunidades
-      en proyectos que generan valor.
-    </p>
+  <div class="foto-portada">
+    <!-- CAMBIA ESTA IMAGEN POR TU FOTOGRAFÍA -->
+    <img src="mi-foto.jpg" alt="Fotografía de Yoranddi">
+  </div>
 
-    <a href="#sobre-mi" class="button">
-      Conoce más sobre mí ↗
+  <div class="botones-contacto">
+
+    <!-- SUSTITUYE POR TU NÚMERO CON CÓDIGO DE PAÍS -->
+    <a class="boton" href="https://wa.me/521XXXXXXXXXX" target="_blank">
+      WhatsApp ↗
+    </a>
+
+    <!-- SUSTITUYE POR TU CORREO -->
+    <a class="boton boton-secundario" href="mailto:TU-CORREO@ejemplo.com">
+      Envíame un correo ✉
     </a>
 
   </div>
 
-  <div class="hero-image">
-
-    <!-- CAMBIA MI-FOTO.JPG POR TU FOTOGRAFÍA -->
-
-    <img src="mi-foto.jpg" alt="Mi fotografía personal">
-
-    <div class="image-tag">
-      Mucho gusto ♡
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =================================
-     SOBRE MÍ
-================================= -->
-
-<section class="about" id="sobre-mi">
-
-  <div class="eyebrow">
-    Un poquito sobre mí
-  </div>
-
-  <h2 class="section-title">
-    Más que un perfil,
-    <span>una historia.</span>
-  </h2>
-
-  <p class="about-text">
-
-    Creo que detrás de cada gran resultado existe
-    una combinación de estrategia, creatividad y compromiso.
-
-    Me gusta aprender, explorar nuevas ideas y encontrar
-    soluciones que generen un impacto positivo.
-
-    Disfruto construir relaciones profesionales basadas
-    en la confianza, la colaboración y los buenos resultados.
-
+  <p class="nota-contacto">
+    También puedes encontrarme en LinkedIn.
   </p>
 
-  <div class="about-note">
+</section>
 
-    "Siempre hay una nueva oportunidad para aprender,
-    crear y hacer las cosas diferente."
+<!-- =================================
+     02. PRESENTACIÓN
+================================= -->
 
+<section class="presentacion" id="presentacion">
+
+  <div class="eyebrow">
+    Un gusto, soy Yoranddi
+  </div>
+
+  <h2 class="titulo">
+    Detrás de cada idea,
+    <span>hay una persona.</span>
+  </h2>
+
+  <p class="texto-presentacion">
+    Me considero una persona curiosa, creativa y comprometida.
+    Disfruto aprender, descubrir nuevas oportunidades y encontrar
+    maneras diferentes de hacer las cosas.
+
+    Me gusta conectar con personas, compartir ideas y construir
+    relaciones profesionales basadas en la confianza.
+
+    Creo que cada experiencia es una oportunidad para crecer,
+    aportar algo nuevo y generar resultados.
+  </p>
+
+  <div class="frase-presentacion">
+    "Me gusta pensar que siempre podemos hacer algo mejor,
+    diferente y con un propósito."
   </div>
 
 </section>
 
 <!-- =================================
-     ESPECIALIDADES
+     03. PROPUESTA DE VALOR
 ================================= -->
 
-<section id="especialidades">
+<section class="propuesta" id="aportaciones">
 
   <div class="eyebrow">
     Mi mundo profesional
   </div>
 
-  <h2 class="section-title">
-    Lo que puedo
-    <span>aportar.</span>
+  <h2 class="titulo">
+    Lo que me mueve
+    <span>y puedo aportar.</span>
   </h2>
 
-  <div class="skills-grid">
+  <div class="tarjetas-propuesta">
 
-    <article class="skill-card">
+    <article class="tarjeta">
 
-      <div class="skill-icon">✦</div>
+      <div class="icono">✦</div>
 
       <h3>Visión comercial</h3>
 
       <p>
-        Identificación de oportunidades, estrategias
-        y desarrollo de iniciativas de negocio.
+        Identificar oportunidades, comprender necesidades
+        y desarrollar estrategias enfocadas en resultados.
       </p>
 
     </article>
 
-    <article class="skill-card">
+    <article class="tarjeta">
 
-      <div class="skill-icon">↗</div>
+      <div class="icono">↗</div>
 
       <h3>Análisis de información</h3>
 
       <p>
-        Transformar datos en indicadores,
-        conocimiento y decisiones estratégicas.
+        Transformar datos en información útil,
+        indicadores y decisiones de valor.
       </p>
 
     </article>
 
-    <article class="skill-card">
+    <article class="tarjeta">
 
-      <div class="skill-icon">✧</div>
+      <div class="icono">✧</div>
 
       <h3>Creatividad e innovación</h3>
 
       <p>
-        Nuevas ideas, soluciones y proyectos
-        enfocados en generar valor.
+        Explorar nuevas ideas, desarrollar propuestas
+        y encontrar soluciones diferentes.
+      </p>
+
+    </article>
+
+    <article class="tarjeta">
+
+      <div class="icono">♡</div>
+
+      <h3>Conexión y colaboración</h3>
+
+      <p>
+        Construir relaciones, trabajar en equipo
+        y generar experiencias positivas.
       </p>
 
     </article>
@@ -714,109 +825,222 @@ body {
 </section>
 
 <!-- =================================
-     PROYECTOS
+     04. PROYECTOS
 ================================= -->
 
-<section class="projects" id="proyectos">
+<section class="proyectos" id="proyectos">
 
   <div class="eyebrow">
-    Experiencia y proyectos
+    Ideas en acción
   </div>
 
-  <h2 class="section-title">
-    Ideas que se vuelven
-    <span>realidad.</span>
+  <h2 class="titulo">
+    Cosas que he
+    <span>creado.</span>
   </h2>
 
-  <article class="project-card">
-
-    <div class="project-number">
-      PROYECTO 01
-    </div>
-
-    <h3>Estrategia comercial</h3>
-
-    <p>
-      Desarrollo de iniciativas y seguimiento
-      de oportunidades enfocadas en crecimiento.
-    </p>
-
-  </article>
-
-  <article class="project-card">
-
-    <div class="project-number">
-      PROYECTO 02
-    </div>
-
-    <h3>Inteligencia de negocio</h3>
-
-    <p>
-      Análisis de información, indicadores
-      y visualización de resultados.
-    </p>
-
-  </article>
-
-  <article class="project-card">
-
-    <div class="project-number">
-      PROYECTO 03
-    </div>
-
-    <h3>Desarrollo de proyectos</h3>
-
-    <p>
-      Planeación, creatividad y ejecución
-      de iniciativas para alcanzar objetivos.
-    </p>
-
-  </article>
-
-</section>
-
-<!-- =================================
-     FRASE
-================================= -->
-
-<section class="quote">
-
-  <p>
-    "Las mejores conexiones comienzan
-    con una buena conversación."
+  <p class="intro-proyectos">
+    Algunos proyectos, iniciativas y experiencias
+    que reflejan mi manera de trabajar y transformar ideas.
   </p>
 
-  <small>
-    Conectemos ideas · Creemos oportunidades
-  </small>
+  <article class="proyecto">
+
+    <div class="numero-proyecto">PROYECTO 01</div>
+
+    <h3>Desarrollo de estrategias comerciales</h3>
+
+    <p>
+      Iniciativas orientadas a identificar oportunidades,
+      impulsar objetivos y mejorar resultados.
+    </p>
+
+    <div class="etiquetas">
+      <span>Estrategia</span>
+      <span>Planeación</span>
+      <span>Negocio</span>
+    </div>
+
+  </article>
+
+  <article class="proyecto">
+
+    <div class="numero-proyecto">PROYECTO 02</div>
+
+    <h3>Análisis y visualización de información</h3>
+
+    <p>
+      Creación de indicadores, herramientas de seguimiento
+      y visualizaciones para facilitar la toma de decisiones.
+    </p>
+
+    <div class="etiquetas">
+      <span>Excel</span>
+      <span>Indicadores</span>
+      <span>Análisis</span>
+    </div>
+
+  </article>
+
+  <article class="proyecto">
+
+    <div class="numero-proyecto">PROYECTO 03</div>
+
+    <h3>Diseño y comunicación de proyectos</h3>
+
+    <p>
+      Desarrollo de materiales visuales, presentaciones
+      e iniciativas para comunicar ideas de manera efectiva.
+    </p>
+
+    <div class="etiquetas">
+      <span>Creatividad</span>
+      <span>Comunicación</span>
+      <span>Diseño</span>
+    </div>
+
+  </article>
 
 </section>
 
 <!-- =================================
-     CONTACTO
+     05. FILOSOFÍA
 ================================= -->
 
-<section class="contact" id="contacto">
+<section class="filosofia" id="filosofia">
 
   <div class="eyebrow">
-    El siguiente paso comienza aquí
+    Mi manera de ver las cosas
   </div>
 
   <h2>
-    ¿Creamos algo
-    <span>increíble?</span>
+    "Las buenas ideas nacen de la curiosidad,
+    crecen con la colaboración y se convierten
+    en resultados con acción."
   </h2>
 
   <p>
-    Siempre estoy abierta a nuevas ideas,
-    proyectos y oportunidades de colaboración.
+    APRENDER · COMPARTIR · CRECER
   </p>
 
-  <a href="mailto:TU-CORREO@ejemplo.com" class="button">
-    Escríbeme ↗
+</section>
+
+<!-- =================================
+     06. LADO HUMANO
+================================= -->
+
+<section class="personal" id="personal">
+
+  <div class="eyebrow">
+    Un poco más de mí
+  </div>
+
+  <h2 class="titulo">
+    También hay vida
+    <span>fuera del trabajo.</span>
+  </h2>
+
+  <p class="texto-personal">
+    Me gusta descubrir cosas nuevas, disfrutar los pequeños
+    momentos, compartir experiencias y mantener siempre
+    la curiosidad por aprender.
+
+    Porque creo que nuestra personalidad también forma
+    parte de lo que aportamos a los demás.
+  </p>
+
+  <div class="intereses">
+
+    <div class="interes">
+      <span>✈️</span>
+      Viajar y descubrir
+    </div>
+
+    <div class="interes">
+      <span>☕</span>
+      Buenos momentos
+    </div>
+
+    <div class="interes">
+      <span>📚</span>
+      Aprender cosas nuevas
+    </div>
+
+    <div class="interes">
+      <span>✨</span>
+      Crear e imaginar
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =================================
+     07. TARJETA DIGITAL
+================================= -->
+
+<section class="tarjeta-digital" id="tarjeta">
+
+  <div class="eyebrow">
+    Guarda mi contacto
+  </div>
+
+  <h2 class="titulo">
+    Sigamos en
+    <span>comunicación.</span>
+  </h2>
+
+  <div class="tarjeta-contacto">
+
+    <h3>Yoranddi Crisóstomo</h3>
+
+    <p>Conectemos ideas y oportunidades.</p>
+
+    <a href="mailto:TU-CORREO@ejemplo.com">
+      ✉ TU-CORREO@ejemplo.com
+    </a>
+
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank">
+      ☎ Mi WhatsApp
+    </a>
+
+    <a href="https://www.linkedin.com/" target="_blank">
+      ↗ Mi LinkedIn
+    </a>
+
+    <button class="boton" onclick="descargarContacto()">
+      Guardar contacto ♡
+    </button>
+
+  </div>
+
+</section>
+
+<!-- =================================
+     CIERRE
+================================= -->
+
+<section class="cierre" id="conectemos">
+
+  <div class="eyebrow">
+    Las mejores conexiones comienzan aquí
+  </div>
+
+  <h2>
+    ¿Y si hacemos
+    <span>algo increíble?</span>
+  </h2>
+
+  <p>
+    Gracias por visitar mi espacio.
+    Espero que esta sea la primera de muchas conversaciones.
+  </p>
+
+  <a href="mailto:TU-CORREO@ejemplo.com" class="boton">
+    Hablemos ↗
   </a>
 
-  <div class="social-links">
+  <div class="redes">
 
     <a href="https://www.linkedin.com/" target="_blank">
       LinkedIn ↗
@@ -838,7 +1062,7 @@ body {
 
 <footer>
 
-  © 2026 · Mi espacio personal · Hecho con creatividad ♡
+  © 2026 · Yoranddi Crisóstomo · Hecho con cariño ♡
 
 </footer>
 
@@ -846,21 +1070,21 @@ body {
      MENÚ INFERIOR PARA CELULAR
 ================================= -->
 
-<nav class="mobile-nav">
+<nav class="menu-movil">
 
   <a href="#inicio">
     <span>⌂</span>
-    Inicio
+    Contacto
   </a>
 
-  <a href="#sobre-mi">
+  <a href="#presentacion">
     <span>♡</span>
     Sobre mí
   </a>
 
-  <a href="#especialidades">
+  <a href="#aportaciones">
     <span>✧</span>
-    Habilidades
+    Lo que hago
   </a>
 
   <a href="#proyectos">
@@ -868,12 +1092,48 @@ body {
     Proyectos
   </a>
 
-  <a href="#contacto">
-    <span>✉</span>
-    Contacto
+  <a href="#personal">
+    <span>☀</span>
+    Personal
   </a>
 
 </nav>
 
+<!-- =================================
+     FUNCIÓN PARA GUARDAR CONTACTO
+================================= -->
+
+<script>
+
+function descargarContacto() {
+
+  const contacto = `BEGIN:VCARD
+VERSION:3.0
+FN:Yoranddi Crisóstomo
+EMAIL:TU-CORREO@ejemplo.com
+TEL;TYPE=CELL:+521XXXXXXXXXX
+END:VCARD`;
+
+  const archivo = new Blob(
+    [contacto],
+    { type: 'text/vcard;charset=utf-8' }
+  );
+
+  const enlace = document.createElement('a');
+
+  enlace.href = URL.createObjectURL(archivo);
+  enlace.download = 'Yoranddi-Crisostomo.vcf';
+
+  document.body.appendChild(enlace);
+  enlace.click();
+
+  document.body.removeChild(enlace);
+  URL.revokeObjectURL(enlace.href);
+
+}
+
+</script>
+
 </body>
 </html>
+
