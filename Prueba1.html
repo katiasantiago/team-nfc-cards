@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -158,20 +157,92 @@ header {
 }
 
 /* =================================
-   01. CONTACTO / PORTADA
+   01. PORTADA: PRESENTACIÓN + CONTACTO
 ================================= */
 
 .contacto-inicial {
-  padding: 55px 7% 60px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 48px 7% 65px;
   text-align: center;
-  background: var(--crema);
+  background:
+    radial-gradient(circle at 8% 12%, #F3D9D7 0, #F3D9D700 23%),
+    radial-gradient(circle at 92% 30%, #B9CDB966 0, #B9CDB900 25%),
+    var(--crema);
+}
+
+.contacto-inicial::before,
+.contacto-inicial::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contacto-inicial::before {
+  width: 150px;
+  height: 150px;
+  background: #F9E7A8;
+  top: 105px;
+  right: -75px;
+  opacity: .65;
+}
+
+.contacto-inicial::after {
+  width: 95px;
+  height: 95px;
+  background: #E8D8C8;
+  bottom: 110px;
+  left: -48px;
+  opacity: .65;
+}
+
+.portada-contenido {
+  max-width: 620px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.portada-saludo {
+  display: inline-block;
+  padding: 9px 15px;
+  margin-bottom: 22px;
+  border: 1px solid #E8D8C8;
+  border-radius: 40px;
+  background: #FFFFFFB8;
+  color: #A47D38;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.foto-portada {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: var(--amarillo);
+  border: 7px solid white;
+  margin: 0 auto 23px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px #D9C29D65;
+  outline: 2px solid #E8C66B;
+  outline-offset: 5px;
+}
+
+.foto-portada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .contacto-inicial h1 {
-  font-size: clamp(43px, 12vw, 65px);
-  line-height: 1.05;
-  letter-spacing: -2.5px;
-  margin-bottom: 20px;
+  font-size: clamp(42px, 11vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -2.7px;
+  margin-bottom: 12px;
 }
 
 .contacto-inicial h1 span {
@@ -181,43 +252,78 @@ header {
   font-style: italic;
 }
 
+.puesto-portada {
+  color: #A47D38;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 13px;
+}
+
 .texto-inicial {
   font-size: 14px;
   color: var(--texto-suave);
-  line-height: 1.8;
-  max-width: 420px;
-  margin: 0 auto 25px;
+  line-height: 1.85;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
-.foto-portada {
-  width: 185px;
-  height: 185px;
-  border-radius: 50%;
-  background: var(--amarillo);
-  border: 7px solid white;
-  margin: 30px auto;
-  overflow: hidden;
-  box-shadow: 0 10px 30px #D9C29D50;
+.contacto-rapido {
+  max-width: 390px;
+  margin: 30px auto 0;
+  padding: 22px 18px 19px;
+  background: #FFFFFFD9;
+  border: 1px solid #EFE3CF;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px #51453610;
 }
 
-.foto-portada img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.contacto-rapido h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contacto-rapido p {
+  color: var(--texto-suave);
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .botones-contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 100%;
   margin: auto;
 }
 
+.botones-contacto .boton {
+  width: 100%;
+}
+
+.contacto-rapido .boton-secundario {
+  background: #FFFDF8;
+}
+
 .nota-contacto {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--texto-suave);
-  margin-top: 22px;
+  margin-top: 14px;
+}
+
+.conocer-mas {
+  display: inline-block;
+  margin-top: 25px;
+  color: #A47D38;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.conocer-mas:hover {
+  color: #80612E;
 }
 
 /* =================================
@@ -596,9 +702,17 @@ body {
   }
 
   .botones-contacto {
-    flex-direction: row;
-    max-width: none;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .contacto-inicial {
+    padding: 75px 9% 75px;
+  }
+
+  .foto-portada {
+    width: 175px;
+    height: 175px;
   }
 
   section {
@@ -678,39 +792,66 @@ body {
 
 <section class="contacto-inicial" id="inicio">
 
-  <div class="eyebrow">
-    ¡Hola! Qué gusto tenerte aquí
-  </div>
+  <div class="portada-contenido">
 
-  <h1>
-    ¿Hablamos?
-    <span>Conectemos ideas.</span>
-  </h1>
+    <div class="portada-saludo">
+      Hola, qué gusto tenerte aquí ✨
+    </div>
 
-  <p class="texto-inicial">
-    Siempre hay espacio para nuevas conversaciones,
-    proyectos y oportunidades. Me encantará conocerte.
-  </p>
+    <div class="foto-portada">
+      <img src="Katia_avatar.png" alt="Fotografía de Katia">
+    </div>
 
-  <div class="foto-portada">
-    <img src="Katia_avatar.png" alt="Fotografía de Katia">
-  </div>
+    <h1>
+      ¡Mucho gusto!
+      <span>Soy Katia.</span>
+    </h1>
 
-  <div class="botones-contacto">
+    <h2 class="puesto-portada">
+      Analista en Coca-Cola FEMSA.
+    </h2>
 
-    <a class="boton" href="https://wa.me/522291483051" target="_blank">
-      WhatsApp ↗
+    <p class="texto-inicial">
+      Formo parte del mundo comercial, donde disfruto conectar ideas,
+      trabajar con información y descubrir nuevas oportunidades.
+      Siempre buscando cómo hacer las cosas mejor.
+    </p>
+
+    <div class="contacto-rapido">
+
+      <h2>¡Conectemos!</h2>
+
+      <p>Será un gusto estar en contacto contigo.</p>
+
+      <div class="botones-contacto">
+
+        <a class="boton" href="https://wa.me/522291483051" target="_blank" rel="noopener">
+          WhatsApp ↗
+        </a>
+
+        <a class="boton boton-secundario" href="mailto:katia.santiago@kof.com">
+          Correo electrónico ✉
+        </a>
+
+        <a class="boton boton-secundario"
+           href="https://www.linkedin.com/katia-santiago-del-rio"
+           target="_blank" rel="noopener">
+          LinkedIn ↗
+        </a>
+
+      </div>
+
+      <p class="nota-contacto">
+        Elige el medio que te resulte más cómodo.
+      </p>
+
+    </div>
+
+    <a href="#presentacion" class="conocer-mas">
+      Conoce un poco más de mí ↓
     </a>
 
-    <a class="boton boton-secundario" href="mailto:katia.santiago@kof.com">
-      Envíame un correo ✉
-    </a>
-
   </div>
-
-  <p class="nota-contacto">
-    También puedes encontrarme en LinkedIn.
-  </p>
 
 </section>
 
@@ -971,4 +1112,3 @@ END:VCARD`;
 
 </body>
 </html>
-
