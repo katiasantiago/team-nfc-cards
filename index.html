@@ -1,379 +1,391 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Katia Santiago Del Rio</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-
-    background:linear-gradient(
-        180deg,
-        #FFF7CC 0%,
-        #FFFDF4 40%,
-        #FFFFFF 100%
-    );
-
-    color:#4F3B1F;
-
-    min-height:100vh;
-
-}
-
-.hero{
-
-    text-align:center;
-    padding:40px 25px;
-
-}
-
-.foto{
-
-    width:160px;
-    height:160px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:6px solid white;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
-
-}
-
-.nombre{
-
-    margin-top:20px;
-
-    font-size:2rem;
-    font-weight:800;
-
-    line-height:1.1;
-
-}
-
-.ubicacion{
-
-    margin-top:10px;
-
-    color:#866A3A;
-
-    font-size:.95rem;
-
-}
-
-.puesto{
-
-    margin-top:12px;
-
-    font-size:1.1rem;
-
-    font-weight:600;
-
-}
-
-.tagline{
-
-    margin-top:18px;
-
-    line-height:1.7;
-
-    color:#6B5330;
-
-}
-
-.botones{
-
-    margin-top:25px;
-
-    display:grid;
-
-    gap:12px;
-
-}
-
-.btn{
-
-    text-decoration:none;
-
-    padding:16px;
-
-    border-radius:16px;
-
-    font-weight:700;
-
-    text-align:center;
-
-    transition:.2s;
-
-}
-
-.btn:active{
-
-    transform:scale(.98);
-
-}
-
-.contacto{
-
-    background:#F8E36E;
-    color:#4F3B1F;
-
-}
-
-.linkedin{
-
-    background:#0A66C2;
-    color:white;
-
-}
-
-.whatsapp{
-
-    background:#25D366;
-    color:white;
-
-}
-
-.correo{
-
-    background:#55402D;
-    color:white;
-
-}
-
-.container{
-
-    padding:0 22px 40px;
-
-}
-
-.card{
-
-    background:white;
-
-    padding:22px;
-
-    border-radius:24px;
-
-    margin-top:18px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-
-}
-
-.card h2{
-
-    margin-bottom:12px;
-
-    font-size:1.1rem;
-
-}
-
-.card p{
-
-    line-height:1.7;
-
-}
-
-.habilidades{
-
-    display:grid;
-
-    gap:14px;
-
-}
-
-.habilidad{
-
-    background:#FFF7D9;
-
-    border-radius:16px;
-
-    padding:14px;
-
-}
-
-.habilidad strong{
-
-    display:block;
-
-    margin-bottom:4px;
-
-}
-
-.quote{
-
-    background:#F8E36E;
-
-    border-radius:18px;
-
-    padding:18px;
-
-    font-style:italic;
-
-    line-height:1.7;
-
-    color:#4F3B1F;
-
-}
-
-.footer{
-
-    text-align:center;
-
-    margin-top:30px;
-
-    color:#886E42;
-
-    font-size:.85rem;
-
-}
-
-    .eyebrow {
-  color: #A47D38;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 17px;
-}
-
-    .redes {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 30px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Katia Santiago Del Rio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        /* ========================================
+           CONFIGURACIÓN GENERAL
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(
+                180deg,
+                #FFF7CC 0%,
+                #FFFDF4 40%,
+                #FFFFFF 100%
+            );
+            color: #4F3B1F;
+            min-height: 100vh;
+        }
+
+        /* ========================================
+           SECCIÓN PRINCIPAL / HERO
+        ======================================== */
+
+        .hero {
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .foto {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+        }
+
+        .nombre {
+            margin-top: 20px;
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .ubicacion {
+            margin-top: 10px;
+            color: #866A3A;
+            font-size: .95rem;
+        }
+
+        .puesto {
+            margin-top: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .tagline {
+            margin-top: 18px;
+            line-height: 1.7;
+            color: #6B5330;
+        }
+
+        /* ========================================
+           BOTONES DE CONTACTO
+        ======================================== */
+
+        .botones {
+            margin-top: 25px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 16px;
+            font-weight: 700;
+            text-align: center;
+            transition: .2s;
+        }
+
+        .btn:active {
+            transform: scale(.98);
+        }
+
+        .contacto {
+            background: #F8E36E;
+            color: #4F3B1F;
+        }
+
+        .linkedin {
+            background: #0A66C2;
+            color: white;
+        }
+
+        .whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .correo {
+            background: #55402D;
+            color: white;
+        }
+
+        /* ========================================
+           CONTENEDOR Y TARJETAS
+        ======================================== */
+
+        .container {
+            padding: 0 22px 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 24px;
+            margin-top: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           HABILIDADES
+        ======================================== */
+
+        .habilidades {
+            display: grid;
+            gap: 14px;
+        }
+
+        .habilidad {
+            background: #FFF7D9;
+            border-radius: 16px;
+            padding: 14px;
+        }
+
+        .habilidad strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* ========================================
+           FRASE DESTACADA
+        ======================================== */
+
+        .quote {
+            background: #F8E36E;
+            border-radius: 18px;
+            padding: 18px;
+            font-style: italic;
+            line-height: 1.7;
+            color: #4F3B1F;
+        }
+
+        /* ========================================
+           SECCIÓN DE CIERRE
+        ======================================== */
+
+        .eyebrow {
+            color: #A47D38;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #886E42;
+            font-size: .85rem;
+        }
+
+    </style>
 </head>
 
 <body>
 
-<section class="hero">
+    <!-- ========================================
+         PRESENTACIÓN PRINCIPAL
+    ======================================== -->
 
-    <img src="Katia_avatar.png" class="foto">
+    <section class="hero">
 
-    <h1 class="nombre">
-        Katia Santiago Del Rio
-    </h1>
+        <img src="Katia_avatar.png" class="foto">
 
-    <p class="puesto">
-        Analista en Coca-Cola FEMSA
-    </p>
+        <h1 class="nombre">
+            Katia Santiago Del Rio
+        </h1>
 
-    <p class="tagline">
-        Transformo datos e información comercial en oportunidades, procesos más eficientes y mejores experiencias.
-    </p>
-
-    <div class="botones">
-
-        <a
-        class="btn contacto"
-        href="contacto.vcf"
-        download>
-        📇 Guardar contacto
-        </a>
-
-        <a
-        class="btn whatsapp"
-        href="https://wa.me/qr/TQZ2Q4BZPRHHJ1">
-        💬 WhatsApp
-        </a>
-
-        <a
-        class="btn correo"
-        href="mailto:katia.santiago@kof.com">
-        ✉️ Correo
-        </a>
-
-    </div>
-
-</section>
-
-<div class="container">
-    <div class="card">
-        <h2>🌼 Un poco sobre mí</h2>
-        <p>
-            Me considero una persona curiosa, creativa y comprometida. Disfruto aprender, descubrir nuevas oportunidades y encontrar maneras diferentes de hacer las cosas. 
+        <p class="puesto">
+            Analista en Coca-Cola FEMSA
         </p>
-    </div>
 
-    <div class="card">
-        <h2>⭐ Lo que me caracteriza</h2>
-        <div class="habilidades">
-            <div class="habilidad">
-                <strong>🔎 Detallista</strong>
-                Atención a los detalles sin perder de vista el objetivo general.
-            </div>
-            <div class="habilidad">
-                <strong>⚡ Aprendizaje y adaptación</strong>
-                Disfruto aprender herramientas, procesos y nuevas formas de trabajar.
-            </div>
-            <div class="habilidad">
-                <strong>📊 Analítica y creativa</strong>
-                Me gusta combinar datos y creatividad para resolver problemas.
-            </div>
+        <p class="tagline">
+            Transformo datos e información comercial en oportunidades, procesos más eficientes y mejores experiencias.
+        </p>
+
+        <!-- BOTONES DE CONTACTO -->
+
+        <div class="botones">
+
+            <a
+                class="btn contacto"
+                href="contacto.vcf"
+                download>
+                📇 Guardar contacto
+            </a>
+
+            <a
+                class="btn whatsapp"
+                href="https://wa.me/qr/TQZ2Q4BZPRHHJ1">
+                💬 WhatsApp
+            </a>
+
+            <a
+                class="btn correo"
+                href="mailto:katia.santiago@kof.com">
+                ✉️ Correo
+            </a>
+
         </div>
+
+    </section>
+
+
+    <!-- ========================================
+         CONTENIDO PRINCIPAL
+    ======================================== -->
+
+    <div class="container">
+
+        <!-- SOBRE MÍ -->
+
+        <div class="card">
+
+            <h2>🌼 Un poco sobre mí</h2>
+
+            <p>
+                Me considero una persona curiosa, creativa y comprometida. Disfruto aprender, descubrir nuevas oportunidades y encontrar maneras diferentes de hacer las cosas.
+            </p>
+
+        </div>
+
+
+        <!-- HABILIDADES -->
+
+        <div class="card">
+
+            <h2>⭐ Lo que me caracteriza</h2>
+
+            <div class="habilidades">
+
+                <div class="habilidad">
+
+                    <strong>🔎 Detallista</strong>
+
+                    Atención a los detalles sin perder de vista el objetivo general.
+
+                </div>
+
+                <div class="habilidad">
+
+                    <strong>⚡ Aprendizaje y adaptación</strong>
+
+                    Disfruto aprender herramientas, procesos y nuevas formas de trabajar.
+
+                </div>
+
+                <div class="habilidad">
+
+                    <strong>📊 Analítica y creativa</strong>
+
+                    Me gusta combinar datos y creatividad para resolver problemas.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MÁS ALLÁ DEL TRABAJO -->
+
+        <div class="card">
+
+            <h2>☕ Más allá del trabajo</h2>
+
+            <p>
+                Me gusta descubrir cosas nuevas, disfrutar los pequeños momentos, compartir experiencias y mantener siempre la curiosidad por aprender. Porque creo que nuestra personalidad también forma parte de lo que aportamos a los demás.
+            </p>
+
+        </div>
+
+
+        <!-- FRASE PERSONAL -->
+
+        <div class="quote">
+
+            "Me gusta pensar que siempre podemos hacer algo mejor, diferente y con un propósito."
+
+        </div>
+
+
+        <!-- ========================================
+             CONECTEMOS
+        ======================================== -->
+
+        <section class="cierre" id="conectemos">
+
+            <div class="eyebrow">
+                Las mejores conexiones comienzan aquí
+            </div>
+
+            <p>
+                Gracias por visitar mi espacio.
+                Espero que esta sea la primera de muchas conversaciones.
+            </p>
+
+            <div class="redes">
+
+                <a
+                    href="https://www.linkedin.com/katia-santiago-del-rio"
+                    target="_blank">
+                    LinkedIn ↗
+                </a>
+
+                <a
+                    href="https://www.instagram.com/kati_santiago"
+                    target="_blank">
+                    Instagram ↗
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             PIE DE PÁGINA
+        ======================================== -->
+
+        <div class="footer">
+
+            © 2026 · Katia Santiago Del Rio · Hecho con ☕ y cariño ♡.
+
+        </div>
+
     </div>
-
-    <div class="card">
-        <h2>☕ Más allá del trabajo</h2>
-        <p>
-            Me gusta descubrir cosas nuevas, disfrutar los pequeños momentos, compartir experiencias y mantener siempre la curiosidad por aprender. Porque creo que nuestra personalidad también forma parte de lo que aportamos a los demás.
-        </p>
-    </div>
-
-    <div class="quote">
-        "Me gusta pensar que siempre podemos hacer algo mejor, diferente y con un propósito."
-    </div>
-<section class="cierre" id="conectemos">
-
-  <div class="eyebrow">
-    Las mejores conexiones comienzan aquí
-  </div>
-  <p>
-    Gracias por visitar mi espacio.
-    Espero que esta sea la primera de muchas conversaciones.
-  </p>
-
-  <div class="redes">
-
-    <a href="https://www.linkedin.com/katia-santiago-del-rio" target="_blank">
-      LinkedIn ↗
-    </a>
-
-    <a href="https://www.instagram.com/kati_santiago" target="_blank">
-      Instagram ↗
-    </a>
-
-  </div>
-
-</section>
-    <div class="footer">
-        © 2026 · Katia Santiago Del Rio · Hecho con ☕ y cariño ♡.
-    </div>
-
-</div>
 
 </body>
 
